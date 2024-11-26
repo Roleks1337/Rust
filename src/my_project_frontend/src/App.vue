@@ -7,9 +7,7 @@ async function handleSubmit(e) {
   e.preventDefault();
   const target = e.target;
   const name = target.querySelector('#name').value;
-  await my_project_backend.greet(name).then((response) => {
-    greeting.value = response;
-  });
+  await my_project_backend.save_chat(chat) 
 }
 </script>
 
@@ -19,7 +17,7 @@ async function handleSubmit(e) {
     <br />
     <br />
     <form action="#" @submit="handleSubmit">
-      <label for="name">Enter your name: &nbsp;</label>
+      <label for="name">Enter your message: &nbsp;</label>
       <input id="name" alt="Name" type="text" />
       <button type="submit">Click Me!</button>
     </form>
