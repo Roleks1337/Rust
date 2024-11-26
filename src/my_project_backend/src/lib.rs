@@ -1,5 +1,5 @@
 use std::cell::RefCell;
-use std::ops::Deref;
+
 thread_local! {
     static CHAT: RefCell<Vec<String>> = RefCell::new(Vec::new());
 }
